@@ -22,8 +22,6 @@ overall <- elo.table.generator(bigtable22)
 Daily predictions generator
 ```{r}
 predictions <- current.day.prediction(bigtable22)
-predictiontable <- predictions %>% 
-  gt() %>% espnscrapeR::gt_theme_538()
 ```
 
 Save standings
