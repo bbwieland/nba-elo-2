@@ -173,6 +173,7 @@ current.day.prediction <- function(elo.table,date = Sys.Date()){
     tab_header(title = md("**NBA Daily Picks**"),
                subtitle = md("*Win probabilities based on Elo rating model inputs*")) %>%
     data_color(columns = c(HomeWP,AwayWP),colors = brewer.pal(5,"RdYlGn")) %>%
+    data_color(columns = c(WinnerPick,HCAWinnerPick),colors = "lightgrey") %>%
     tab_source_note(source_note = paste0("Date generated: ",Sys.Date())) %>%
     espnscrapeR::gt_theme_538()
   
