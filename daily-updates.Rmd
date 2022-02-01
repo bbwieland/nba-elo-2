@@ -1,0 +1,40 @@
+---
+title: "daily-updates"
+output: html_document
+---
+Intro code
+```{r}
+
+setwd("/Users/ben/Desktop/NBA Elo Ratings/nba-elo-2/")
+
+table22 <- elo.by.team(elo.model.builder(2022))
+teamtable22 <- team.info.table(2022)
+bigtable22 <- overall.table(table22,teamtable22)
+```
+
+Standings, tables generation
+```{r}
+standings <- elo.standings.generator(bigtable22)
+conference <- elo.conference.generator(bigtable22) 
+overall <- elo.table.generator(bigtable22)
+```
+
+Daily predictions generator
+```{r}
+predictions <- current.day.prediction(bigtable22)
+predictiontable <- predictions %>% 
+  gt() %>% espnscrapeR::gt_theme_538()
+```
+
+Save standings
+```{r}
+gtsave(standings,"elo-division-standings.html")
+gtsave(conference,"elo-conference-standings.html")
+gtsave(overall,"elo-overall-standings.html")
+```
+
+Save predictions
+```{r}
+
+```
+

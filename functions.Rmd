@@ -54,7 +54,6 @@ elo.by.team <- function(elo.model) {
 ## This function takes a year as the argument, like elo.table.builder
 ## It returns a dataframe
 
-test <- team.info.table(2021)
 team.info.table <- function(year){
 
   site <- read_html("https://en.wikipedia.org/wiki/Wikipedia:WikiProject_National_Basketball_Association/National_Basketball_Association_team_abbreviations")
