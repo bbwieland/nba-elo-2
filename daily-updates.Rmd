@@ -33,6 +33,7 @@ gtsave(overall,"elo-overall-standings.html")
 
 Save predictions
 ```{r}
-
+predict.gt <- predictions$picktable
+gtsave(predict.gt,"daily-predictions.html")
 ```
 
