@@ -162,8 +162,12 @@ current.day.prediction <- function(elo.table,date = Sys.Date()){
            HCAWinnerPick = ifelse(HCAHomeWP >= .5,HomeTeam,AwayTeam))
            
   winner.picks <- day.games %>% 
-    mutate(matchup = paste0(AwayTeam," @ ",HomeTeam)) %>%
-    select(idGame,matchup,HCAWinnerPick)
+    mutate(Matchup = paste0(AwayTeam," @ ",HomeTeam)) %>%
+    select(idGame,Matchup,HCAWinnerPick)
+  
+  picks.gt.data <- day.games %>%
+    mutate(Matchup = paste0(AwayTeam," @ ",HomeTeam)) %>%
+    select(Matchup,HomeElo,AwayElo,HCAHomeElo,HomeWP,AwayWP,HCAHomeWP,HCAAwayWP,WinnerPick,HCAWinnerPick)
   
   set <- list(fullpredictions = day.games,picks = winner.picks)
   set
