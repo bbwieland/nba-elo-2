@@ -163,13 +163,20 @@ current.day.prediction <- function(elo.table,date = Sys.Date()){
            
   winner.picks <- day.games %>% 
     mutate(Matchup = paste0(AwayTeam," @ ",HomeTeam)) %>%
-    select(idGame,Matchup,HCAWinnerPick)
+    select(idGame,Matchup,HCAWinnerPick) 
   
   picks.gt.data <- day.games %>%
     mutate(Matchup = paste0(AwayTeam," @ ",HomeTeam)) %>%
     select(Matchup,HomeElo,AwayElo,HCAHomeElo,HomeWP,AwayWP,HCAHomeWP,HCAAwayWP,WinnerPick,HCAWinnerPick)
   
-  set <- list(fullpredictions = day.games,picks = winner.picks)
+  picks.gt <- picks.gt.data %>% gt() %>%
+    tab_header(title = md("**NBA Daily Picks**"),
+               subtitle = md("*Win probabilities based on Elo rating model inputs*")) %>%
+    data_color(columns = c(HomeWP,AwayWP),colors = brewer.pal(5,"RdYlGn")) %>%
+    tab_source_note(source_note = paste0("Date generated: ",Sys.Date())) %>%
+    espnscrapeR::gt_theme_538()
+  
+  set <- list(fullpredictions = day.games,picks = winner.picks,picktable = picks.gt)
   set
 }
 ```
