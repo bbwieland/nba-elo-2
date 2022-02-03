@@ -40,6 +40,6 @@ Save predictions
 ```{r}
 setwd("/Users/ben/Desktop/NBA Elo Ratings/nba-elo-2/Daily Predictions")
 predict.gt <- predictions$picktable
-gtsave(predict.gt,"-daily-predictions.html")
+gtsave(predict.gt,paste0(Sys.Date(),"-daily-predictions.html"))
 ```
 
