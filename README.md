@@ -1,7 +1,17 @@
 # nba-elo-2
 *An Elo rating model for evaluating NBA teams.*
 
-Functions included so far: 
+**Outputs:**
+
+Every time the code in daily-updates is executed: 
+- a HTML table with predictions for that day
+- a HTML table with overall NBA Elo standings
+- a HTML table with conference-specific NBA Elo standings
+- a HTML table with division-specific NBA Elo standings
+
+*note: until I figure out how to turn functions.Rmd into a working R package, you must run ALL the code chunks in functions.Rmd before executing ANY of the code in daily-updates.rmd*
+
+Functions included: 
 
 **Scraping and Data Generation**
 - elo.model.builder: creates an Elo model for a given NBA season
