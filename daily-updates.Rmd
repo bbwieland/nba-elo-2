@@ -28,12 +28,16 @@ Save standings
 ```{r}
 setwd("/Users/ben/Desktop/NBA Elo Ratings/nba-elo-2/Division Standings")
 gtsave(standings,paste0(Sys.Date(),"-elo-division-standings.html"))
+gtsave(standings,paste0(Sys.Date(),"-elo-division-standings.png"))
 
 setwd("/Users/ben/Desktop/NBA Elo Ratings/nba-elo-2/Conference Standings")
 gtsave(conference,paste0(Sys.Date(),"-elo-conference-standings.html"))
+gtsave(conference,paste0(Sys.Date(),"-elo-conference-standings.png"))
 
 setwd("/Users/ben/Desktop/NBA Elo Ratings/nba-elo-2/Overall Standings")
 gtsave(overall,paste0(Sys.Date(),"-elo-overall-standings.html"))
+gtsave(overall,paste0(Sys.Date(),"-elo-overall-standings.png"))
+
 ```
 
 Save predictions
@@ -41,5 +45,6 @@ Save predictions
 setwd("/Users/ben/Desktop/NBA Elo Ratings/nba-elo-2/Daily Predictions")
 predict.gt <- predictions$picktable
 gtsave(predict.gt,paste0(Sys.Date(),"-daily-predictions.html"))
+gtsave(predict.gt,paste0(Sys.Date(),"-daily-predictions.png"))
 ```
 

@@ -166,7 +166,7 @@ current.day.prediction <- function(elo.table,date = Sys.Date()){
     select(idGame,Matchup,HCAWinnerPick) 
   
   picks.gt.data <- day.games %>%
-    mutate(Matchup = paste0(AwayTeam," @ ",HomeTeam)) %>%
+    mutate(Matchup = paste0(HomeTeam," vs. ",AwayTeam)) %>%
     select(Matchup,HomeElo,AwayElo,HCAHomeElo,HomeWP,AwayWP,HCAHomeWP,HCAAwayWP,WinnerPick,HCAWinnerPick)
   
   picks.gt <- picks.gt.data %>% gt() %>%
@@ -175,7 +175,18 @@ current.day.prediction <- function(elo.table,date = Sys.Date()){
     data_color(columns = c(HomeWP,AwayWP),colors = brewer.pal(5,"RdYlGn")) %>%
     data_color(columns = c(WinnerPick,HCAWinnerPick),colors = "lightgrey") %>%
     tab_source_note(source_note = paste0("Date generated: ",Sys.Date())) %>%
-    espnscrapeR::gt_theme_538()
+    espnscrapeR::gt_theme_538() %>%
+    fmt_percent(columns = c(HomeWP,AwayWP,HCAHomeWP,HCAAwayWP),
+              decimals = 1) %>%
+    cols_label(HomeElo = "Home Team Elo",
+               AwayElo = "Away Team Elo",
+               HCAHomeElo = "Home Team Elo, Home-Court Adjusted",
+               HomeWP = "Home Win Probability",
+               AwayWP = "Away Win Probability",
+               HCAHomeWP = "Home Win Probability, HC Adjusted",
+               HCAAwayWP = "Away Win Probability, HC Adjusted",
+               WinnerPick = "Predicted Winner using Elo",
+               HCAWinnerPick = "Predicted Winner using HC Adjusted Elo")
   
   set <- list(fullpredictions = day.games,picks = winner.picks,picktable = picks.gt)
   set
