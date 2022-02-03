@@ -26,9 +26,9 @@ predictions <- current.day.prediction(bigtable22)
 
 Save standings
 ```{r}
-gtsave(standings,"elo-division-standings.html")
-gtsave(conference,"elo-conference-standings.html")
-gtsave(overall,"elo-overall-standings.html")
+gtsave(standings,paste0(Sys.Date(),"elo-division-standings.html"))
+gtsave(conference,paste0(Sys.Date(),"elo-conference-standings.html"))
+gtsave(overall,paste0(Sys.Date(),"elo-overall-standings.html"))
 ```
 
 Save predictions
