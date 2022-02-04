@@ -198,9 +198,7 @@
   </tfoot>
   
 </table>
-</div>
-</body>
-</html>
+
 
 **Outputs:**
 
