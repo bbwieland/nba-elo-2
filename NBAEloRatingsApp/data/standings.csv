@@ -1,0 +1,31 @@
+"","Abbreviation","Team","Conference","Division","WinPct","Record","elo"
+"1","PHX","Phoenix Suns","West","Pacific",0.817,"49-11",1208
+"2","MEM","Memphis Grizzlies","West","Southwest",0.672,"41-20",1123
+"3","GSW","Golden State Warriors","West","Pacific",0.717,"43-17",1101
+"4","MIA","Miami Heat","East","Southeast",0.65,"39-21",1099
+"5","PHI","Philadelphia 76ers","East","Atlantic",0.61,"36-23",1097
+"6","CHI","Chicago Bulls","East","Central",0.65,"39-21",1088
+"7","DAL","Dallas Mavericks","West","Southwest",0.583,"35-25",1076
+"8","BOS","Boston Celtics","East","Atlantic",0.574,"35-26",1074
+"9","DEN","Denver Nuggets","West","Northwest",0.576,"34-25",1069
+"10","TOR","Toronto Raptors","East","Atlantic",0.552,"32-26",1064
+"11","UTA","Utah Jazz","West","Northwest",0.627,"37-22",1062
+"12","MIL","Milwaukee Bucks","East","Central",0.6,"36-24",1050
+"13","CLE","Cleveland Cavaliers","East","Central",0.593,"35-24",1046
+"14","MIN","Minnesota Timberwolves","West","Northwest",0.525,"32-29",1040
+"15","LAC","LA Clippers","West","Pacific",0.5,"31-31",1012
+"16","ATL","Atlanta Hawks","East","Southeast",0.475,"28-31",998
+"17","NOP","New Orleans Pelicans","West","Southwest",0.4,"24-36",990
+"18","CHA","Charlotte Hornets","East","Southeast",0.492,"30-31",975
+"19","SAS","San Antonio Spurs","West","Southwest",0.4,"24-36",967
+"20","BKN","Brooklyn Nets","East","Atlantic",0.517,"31-29",951
+"21","POR","Portland Trail Blazers","West","Northwest",0.417,"25-35",951
+"22","LAL","Los Angeles Lakers","West","Pacific",0.458,"27-32",945
+"23","WAS","Washington Wizards","East","Southeast",0.458,"27-32",924
+"24","NYK","New York Knicks","East","Atlantic",0.417,"25-35",898
+"25","SAC","Sacramento Kings","West","Pacific",0.361,"22-39",889
+"26","OKC","Oklahoma City Thunder","West","Northwest",0.317,"19-41",881
+"27","IND","Indiana Pacers","East","Central",0.328,"20-41",870
+"28","DET","Detroit Pistons","East","Central",0.237,"14-45",862
+"29","ORL","Orlando Magic","East","Southeast",0.23,"14-47",852
+"30","HOU","Houston Rockets","West","Southwest",0.254,"15-44",826
