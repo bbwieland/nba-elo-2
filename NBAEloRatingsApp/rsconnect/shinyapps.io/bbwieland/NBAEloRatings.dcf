@@ -5,9 +5,9 @@ account: bbwieland
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 5739219
-bundleId: 5620886
+bundleId: 5620978
 url: https://bbwieland.shinyapps.io/NBAEloRatings/
-when: 1645893703.80995
-lastSyncTime: 1645893703.80997
+when: 1645896033.50079
+lastSyncTime: 1645896033.50081
 asMultiple: FALSE
 asStatic: FALSE

@@ -1,6 +1,10 @@
 library(shiny)
 library(NBAEloRatings)
 
+gt_tbl_picks <- data$DailyPicks$picktable
+gt_tbl_standings <- data$DivisionStandings
+gt_tbl_overall <- data$OverallStandings
+
 ui <- fluidPage(
     
 
@@ -22,11 +26,6 @@ ui <- fluidPage(
 server <- function(input,
                    output,
                    session) {
-    
-    data = NBAEloRatings::overall.function.wrapper(2022)
-    gt_tbl_picks <- data$DailyPicks$picktable
-    gt_tbl_standings <- data$DivisionStandings
-    gt_tbl_overall <- data$OverallStandings
     
     output$standings <-
         render_gt(
