@@ -1,0 +1,13 @@
+name: finalizedapp
+title:
+username:
+account: bbwieland
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 5737919
+bundleId: 5620740
+url: https://bbwieland.shinyapps.io/finalizedapp/
+when: 1645889662.45107
+lastSyncTime: 1645889662.4511
+asMultiple: FALSE
+asStatic: FALSE

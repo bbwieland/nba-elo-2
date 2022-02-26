@@ -1,0 +1,14 @@
+name: NBAEloRatingsApp
+title: NBAEloRatingsApp
+username:
+account: bbwieland
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 5737937
+bundleId: 5619692
+url: https://bbwieland.shinyapps.io/NBAEloRatingsApp/
+when: 1645852539.13549
+lastSyncTime: 1645852539.13551
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: app.R
