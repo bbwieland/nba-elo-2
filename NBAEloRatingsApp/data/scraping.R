@@ -3,7 +3,8 @@ library(NBAEloRatings)
 year = 2022
 data = overall.function.wrapper(year)
 
-overall = data$OverallStandings$OverallData
+overall = data$OverallStandings$OverallData %>%
+  select(-X)
 standings = data$DivisionStandings$DivisionData
 daily = data$DailyPicks$fullpredictions %>% select(-dateGame,-idGame)
 

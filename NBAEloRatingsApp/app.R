@@ -1,35 +1,24 @@
 library(shiny)
+library(NBAEloRatings)
+    
+data = NBAEloRatings::overall.function.wrapper(2022)
 
-
-overall = read.csv("NBAEloRatingsApp/data/overall.csv")
-standings = read.csv("NBAEloRatingsApp/data/standings.csv")
-picks = read.csv("NBAEloRatingsApp/data/daily.csv")
 
 ui <- fluidPage(
-
-    titlePanel("Up-to-Date NBA Elo Standings"),
     fluidRow(
-        column(5,align="center",renderTable("standings")),
-        column(5,aligh="center",renderTable("overall"))
-        ),
-    
-    titlePanel("Daily NBA Predictions"),
-    
-    fluidRow(
-        column(5,align="center",renderTable("picks"),offset = 1)
+        column(6,gt_output("overall")),
+        column(6,gt_output("picks"))
     )
+    
+    
 )
 
 server <- function(input,
                    output,
                    session) {
-    
-    output$standings <- tableOutput(standings)
-    
-    output$overall <- tableOutput(overall)
-    
-    output$picks <- tableOutput(picks)
-    
+    output$overall = render_gt(data$OverallStandings$OverallGT)
+    output$standings = render_gt(data$DivisionStandings$DivisionGT)
+    output$picks = render_gt(data$DailyPicks$picktable)
     
 }
 
